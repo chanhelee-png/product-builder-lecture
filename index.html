@@ -3,15 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lotto Number Generator</title>
+    <title>PocketMoney - Parent-Child Hub</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Lotto Number Generator</h1>
-        <div class="numbers-container"></div>
-        <button id="generate-btn">Generate Numbers</button>
+    <div class="app-shell">
+        <header class="app-header">
+            <div class="logo">
+                <span class="logo-icon">💰</span>
+                <h1>PocketMoney</h1>
+            </div>
+            <div class="role-selector">
+                <button id="toggle-parent" class="role-btn active" data-role="parent">Parent Mode</button>
+                <button id="toggle-child" class="role-btn" data-role="child">Child Mode</button>
+            </div>
+        </header>
+
+        <main class="dashboard">
+            <section class="top-row">
+                <balance-display id="main-balance"></balance-display>
+            </section>
+
+            <section class="actions-container">
+                <div id="parent-actions" class="view-panel">
+                    <allowance-form></allowance-form>
+                </div>
+                <div id="child-actions" class="view-panel hidden">
+                    <spending-form></spending-form>
+                </div>
+            </section>
+
+            <section class="history-container">
+                <transaction-history id="history-list"></transaction-history>
+            </section>
+        </main>
+
+        <footer class="app-footer">
+            <p>&copy; 2024 PocketMoney - Building Smart Financial Habits</p>
+        </footer>
     </div>
-    <script src="main.js"></script>
+    <script type="module" src="main.js?v=1.1"></script>
 </body>
 </html>

@@ -1,18 +1,28 @@
-
-# Blueprint: Lotto Number Generator
+# Blueprint: Parent-Child Pocket Money & Coin Manager
 
 ## Overview
-
-This is a simple web application that generates and displays a set of random lottery numbers.
+A collaborative web application designed to help parents and children manage both pocket money and a reward-based "Coin" system. It fosters financial literacy and rewards positive behavior.
 
 ## Features
+- **Dual Currency System:** Track both traditional Pocket Money (₩) and Reward Coins (🪙).
+- **Role-Based Views:** Toggle between Parent and Child interfaces.
+- **Parent Management:** 
+    - Give Pocket Money or Reward Coins.
+    - Approval system for allowances.
+- **Child Spending Tracker:**
+    - Record spending in Money or Coins.
+- **Unified Dashboard:**
+    - Real-time display of both balances (Money & Coins).
+    - Merged transaction history with clear visual distinction.
+- **Modern UI:** Vibrant, interactive design using Web Components and modern CSS.
 
-*   **Number Generation:** Generates 6 unique random numbers between 1 and 45.
-*   **Display:** Displays the generated numbers in a clean and modern interface.
-*   **User Interaction:** A button to trigger the number generation.
+## Current Plan (Transformation Steps)
+1. **Multi-Currency Infrastructure:** Update `State` to manage two balances and tag history items by currency type.
+2. **Dual Balance Display:** Modify `<balance-display>` to show both Money and Coin balances with distinct icons/glows.
+3. **Flexible Input Forms:** Update forms to allow toggling between Money and Coin for both giving and spending.
+4. **Enhanced History:** Update `<transaction-history>` to visually differentiate between currency types.
+5. **Persistence:** Ensure both currencies are correctly saved to `localStorage`.
 
-## Current Plan
-
-*   **HTML:** Create the basic structure of the web page, including a title, a container for the numbers, and a button.
-*   **CSS:** Style the page for a visually appealing and responsive layout.
-*   **JavaScript:** Implement the logic for generating and displaying the lottery numbers.
+## Tech Stack
+- **HTML5 / CSS3:** Baseline features, Web Components.
+- **JavaScript:** ES Modules, LocalStorage.
